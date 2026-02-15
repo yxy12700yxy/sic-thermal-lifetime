@@ -239,7 +239,7 @@ Failure predicted when `D_total ≥ 1.0` (100% life consumed)
 
 ## ⚠️ NOTE ON CONFIDENTIALITY
 
-This work was initially developed on MALTAB in collaboration with **Ferrari S.p.A.** for my Master's Thesis.
+This work was initially developed on MATLAB in collaboration with **Ferrari S.p.A.** for my Master's Thesis.
 
 Due to intellectual property (IP) considerations:
 - ✅ **Full thesis documentation** is publicly available
