@@ -33,7 +33,7 @@ def main():
     print(f"\nProfiles directory: {PROFILES_DIR.absolute()}")
     
     scenarios = ['urban', 'highway', 'performance']
-    duration_sec = 600  # 10 minutes
+    duration_sec = 10  # 10 minutes
     dt = 0.0001  # 0.1 ms time step
     
     for scenario in scenarios:
