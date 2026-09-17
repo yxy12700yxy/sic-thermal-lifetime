@@ -179,7 +179,7 @@ PROFILES_DIR = Path("profiles")
 # ================================================================================
 
 def generate_mission_profile(scenario: str = 'urban',
-                            duration_sec: int = 600,
+                            duration_sec: int = 10,
                             dt: float = 0.0001) -> pd.DataFrame:
     """
     Generate deterministic mission profiles (no randomness for reproducibility)
@@ -267,7 +267,7 @@ def ensure_profiles_exist():
         filepath = PROFILES_DIR / f"{scenario}_profile.csv"
         if not filepath.exists():
             print(f"\n[Generating missing profile: {scenario}]")
-            profile = generate_mission_profile(scenario, duration_sec=600, dt=0.0001)
+            profile = generate_mission_profile(scenario, duration_sec=10, dt=0.0001)
             save_profile_to_csv(profile, scenario)
 
 # ================================================================================
