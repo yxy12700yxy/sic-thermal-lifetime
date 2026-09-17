@@ -99,7 +99,7 @@ class TestProfileGeneration(unittest.TestCase):
     
     def test_urban_profile_generation(self):
         """Test urban profile generation"""
-        profile = generate_mission_profile('urban', duration_sec=10, dt=0.01)
+        profile = generate_mission_profile('urban', duration_sec=50, dt=0.01)
         
         self.assertIsInstance(profile, pd.DataFrame)
         self.assertIn('Time_s', profile.columns)
@@ -204,7 +204,7 @@ class TestThermalSimulation(unittest.TestCase):
     
     def test_thermal_simulation_stability(self):
         """Test that thermal simulation remains stable"""
-        profile = generate_mission_profile('urban', duration_sec=10, dt=0.0001)  # Changed from 0.001 to 0.0001
+        profile = generate_mission_profile('urban', duration_sec=50, dt=0.0001)  # Changed from 0.001 to 0.0001
         T_j, P_loss = solve_coupled_thermal_electrical(profile, T_ambient=25.0)
         
         # Check for NaN or Inf
